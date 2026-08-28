@@ -3,6 +3,7 @@ document.querySelectorAll('.btnDetail').forEach(item => {
         let parent = e.target.parentNode.parentNode;
 
         let gambar = parent.querySelector('.card-img-top').src;
+		console.log(gambar)
         let color = parent.querySelector('.card-img-top').style.backgroundColor;
 		
 		// mengambil nomor di string gambar

@@ -20,6 +20,10 @@ function UbahTampilan(){
 		if(i>dataaktif.length){
 			document.getElementById("nama"+i).style.display = "none";
 		}else{
+			document.getElementById("img"+i).style = "display: block; margin: 0 auto; object-fit: contain;";
+			
+			document.getElementById("img"+i).width="500";
+			document.getElementById("img"+i).height="500";
 			document.getElementById("img"+i).src = "images/"+(noklik+1)+"/"+dataaktif[i-1].gambar1;
 			document.getElementById("img"+i).style.backgroundColor = dataaktif[i-1].bg;
 			document.getElementById("judul"+i).innerHTML = dataaktif[i-1].judul;
