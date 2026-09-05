@@ -46,7 +46,33 @@ document.querySelectorAll('.btnDetail').forEach(item => {
 
         const nohp = '6285714408830';
         let pesan = `https://api.whatsapp.com/send?phone=${nohp}&text=Halo Bang, saya mau pesan produk ini ${judul}`;
-
         document.querySelector('.btnBeli').href = pesan;
+		
+        //document.querySelector('.btnBeli').addEventListener('click', () => {
+		//  pay(parseInt(harga),judul);
+		//});
+		
     });
 });
+
+async function pay(price, name) {
+      try {
+        const response = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ item: { name, price } })
+        });
+        
+        const data = await response.json();
+        if (data.payment_url) {
+          // Redirect pengguna ke halaman pembayaran DOKU
+          window.location.href = data.payment_url;
+          //window.top.location.href = data.payment_url;
+		  //window.location.assign(data.payment_url);
+        } else {
+          alert('Gagal memproses pembayaran');
+        }
+      } catch (err) {
+        alert('Terjadi kesalahan koneksi');
+      }
+    }
