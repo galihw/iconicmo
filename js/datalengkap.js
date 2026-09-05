@@ -1069,7 +1069,7 @@ var ardata = [
 					harga:150000,
 					gambar1:'kaos4.png',
 					gambar2:'orang4.jpg',
-					bg:'black'},
+					bg:'white'},
 			   {judul:"90+6=99 5",
 					deskripsi:"90+6=99",
 					harga:150000,
