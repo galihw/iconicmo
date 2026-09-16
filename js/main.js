@@ -268,7 +268,7 @@ function hideDetail() {
 function buyViaWhatsApp() {
 	if (!currentSelectedProduct) return;
 	
-	const nomorWA = "6285714408830";
+	const nomorWA = "6287808378591";
 	const pesan = `Halo iconicmo, saya ingin memesan kaos sablon berikut:\n\n` +
 				  `📌 *Nama Produk:* ${currentSelectedProduct.judul}\n` +
 				  `🏷️ *Kategori:* ${currentSelectedProduct.kategori}\n` +
